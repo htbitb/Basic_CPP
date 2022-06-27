@@ -1,4 +1,4 @@
-// C++ function parameters pass by reference
+
 
 /* Author: Ha Thanh Binh
     Date : 6/27/2021
@@ -7,6 +7,8 @@
 #include <string>
 
 using namespace std; // 
+
+// C++ function parameters pass by reference
 
 void swapNums(int &x, int &y){
     int z = x;
@@ -28,6 +30,23 @@ int main()
     cout << "after swap: "<< "\n";
     cout << firstNum << secondNum << "\n";
 
+    return 0;
+
+}
+
+
+Pass Arrays as function parameters 
+
+void myFunction(int myNumber[5]){
+    for (int i = 0; i < 5 ; i++){
+        cout << myNumber[i] << "\n";
+    }
+
+}
+
+int main(){
+    int myNumbers[5] = {10,20,30,40,50};
+    myFunction(myNumbers);
     return 0;
 
 }
